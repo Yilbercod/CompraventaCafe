@@ -1,0 +1,447 @@
+/* ==== ESTILO GENERAL ==== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0A1931; /* Azul oscuro */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: #112A46; /* Azul más oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    margin-top: 20px;
+}
+
+/* ==== FORMULARIO ==== */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background: #1C3B5F; /* Azul oscuro */
+    color: #fff;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 2px solid #00A8E8; /* Azul brillante */
+}
+
+/* ==== BOTONES ==== */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Botones con colores mejorados */
+.registrar-btn {
+    background: #00A8E8; /* Azul vivo */
+    color: #fff;
+}
+
+.pagar-btn {
+    background: #FFC107; /* Amarillo */
+    color: #222;
+}
+
+.eliminar-btn {
+    background: #E74C3C; /* Rojo */
+    color: #fff;
+}
+
+.modo-oscuro-btn {
+    background: #2C3E50; /* Azul más oscuro */
+    color: #fff;
+}
+
+/* ==== TABLA DE VENTAS ==== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #0F2A47; /* Azul oscuro */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Encabezados de la tabla */
+th {
+    background: #1D4E89; /* Azul más claro */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Celdas con buen contraste */
+td {
+    background: #184D72; /* Azul oscuro */
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Filas alternas */
+tr:nth-child(even) td {
+    background: #226597; /* Azul intermedio */
+}
+
+/* Resaltar fila total */
+tfoot td {
+    background: #00A8E8; /* Azul brillante */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ==== ESTADOS DE PAGO ==== */
+.deuda {
+    color: #FF5252 !important; /* Rojo fuerte */
+    font-weight: bold;
+}
+
+.pagado {
+    color: #2EFF86 !important; /* Verde brillante */
+    font-weight: bold;
+}
+
+/* ==== NOTIFICACIONES ==== */
+#notificacion {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00A8E8;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* ==== MODO OSCURO ==== */
+.dark-mode {
+    background: #0D0D0D;
+    color: #ffffff;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/* ==== MODO OSCURO TOTAL ==== */
+.dark-mode {
+    background: #0A0A0A; /* Negro elegante para toda la página */
+    color: #ffffff;
+}
+
+/* Contenedor con fondo negro estilizado */
+.dark-mode .container {
+    background: #121212; /* Negro con un poco de gris */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Sombra sutil */
+}
+
+/* Tabla completamente negra */
+.dark-mode table {
+    background: #000000; /* Negro puro */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden;
+}
+
+/* Encabezados con un gris oscuro */
+.dark-mode th {
+    background: #222222; /* Gris oscuro */
+    color: #ffffff;
+}
+
+/* Celdas completamente negras */
+.dark-mode td {
+    background: #0F0F0F; /* Negro intermedio */
+    color: #E0E0E0; /* Gris claro para buen contraste */
+}
+
+/* Filas alternas con un negro más claro */
+.dark-mode tr:nth-child(even) td {
+    background: #1A1A1A;
+}
+
+/* Resaltar fila total */
+.dark-mode tfoot td {
+    background: #333333;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Botones en modo oscuro */
+.dark-mode button {
+    background: #252525;
+    color: white;
+    border: 1px solid #444;
+}
+
+.dark-mode button:hover {
+    background: #3a3a3a;
+}
+
+/* Notificación con tono oscuro */
+.dark-mode #notificacion {
+    background: #1F1F1F;
+    color: white;
+}
+
+/* Estados de pago en modo oscuro */
+.dark-mode .deuda {
+    color: #FF5252 !important; /* Rojo fuerte */
+    font-weight: bold;
+}
+
+.dark-mode .pagado {
+    color: #2EFF86 !important; /* Verde brillante */
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal .btn {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#btnConfirmar {
+    background: green;
+    color: white;
+}
+
+#btnCancelar {
+    background: red;
+    color: white;
+}
+
+
+
+
+
+
+
+button {
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+
+#notificacion {
+    display: none;
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00A8E8;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    transition: top 0.5s ease-in-out;
+}
+
+#notificacion.mostrar {
+    top: 10px;
+}
+
+
+
+
+
+
+body, .container, table, th, td, button {
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reducimos un poco el tamaño del texto */
+    }
+
+    .container {
+        width: 90%; /* Reducimos el ancho para que no ocupe toda la pantalla */
+        max-width: 400px; /* Limitamos el ancho máximo */
+        margin: 0 auto; /* Centramos el contenido */
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+    font-size:12px;
+        padding: 8px;
+        text-align: center;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+        width: 90%; /* Hacemos los botones más angostos */
+        margin: 5px auto; /* Centramos los botones */
+        display: block;
+    }
+
+    .pagar-btn, .marcar-btn, .eliminar-btn {
+        font-size: 10px;
+        padding: 6px;
+        width: 90%;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* Hacemos los inputs más angostos */
+        margin: 5px auto; /* Centramos */
+        display: block;
+    }
+
+    /* Ajuste para la tabla */
+    .tabla-contenedor {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    /* ==== FONDO BIENVENIDA ==== */
+#bienvenida {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #0A1931, #112A46, #0A1931);
+    background-size: 400% 400%;
+    animation: moverFondo 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation-delay: 0s;
+    opacity: 1;
+    animation: fadeOut 1s ease 4s forwards;
+}
+
+@keyframes moverFondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ==== CONTENIDO DE BIENVENIDA ==== */
+.contenido-bienvenida {
+    background: rgba(17, 42, 70, 0.9);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    animation: aparecerZoom 1s ease;
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+@keyframes aparecerZoom {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.contenido-bienvenida h1 {
+    font-size: 36px;
+    color: #00FFD1;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+.contenido-bienvenida p {
+    color: #e0e0e0;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+}
