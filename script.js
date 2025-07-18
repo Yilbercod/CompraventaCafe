@@ -369,6 +369,4 @@ function mostrarNotificacion(mensaje) {
             notificacion.style.display = "none";
         }, 500);
     }, 3000);
-    
-    
 }
